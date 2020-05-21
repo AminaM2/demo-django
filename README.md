@@ -1,12 +1,12 @@
 # Demo Django - Installations
 Projet séminaire
 
-Étapes pour configurer votre environnement sur Windows*:
-*Pour configuration sur un autre système d'eploitation, voir la source fournie en bas du fichier
+<p>Étapes pour configurer votre environnement sur Windows*:</p>
+<p>*Pour configuration sur un autre système d'eploitation, voir la source fournie en bas du fichier</p>
 
-(Optionnel) : télécharger l'éditeur de texte Sublime que j'utiliserais durant ce séminaire.
+<p>(Optionnel) : télécharger l'éditeur de texte Sublime que j'utiliserais durant ce séminaire.</p>
 
-<b>Partie 1- Installer Python</b>
+<p><b>Partie 1- Installer Python</b></p>
 
 <ol>
 	<li>Aller sur https://www.python.org/downloads/ et télécharger la dernière version de python (3.8.3). Télécharger l'installateur adapté à votre système (Windows x86-64 executable installer dans le cas d'un système X64).</li>
@@ -36,7 +36,7 @@ Projet séminaire
 	</li>
 </ol>
   
-<b>Partie 2 - Modifier les paramètres de PowerShell</b>
+<p><b>Partie 2 - Modifier les paramètres de PowerShell</b></p>
 
 <ol>
 	<li>Ouvrir PowerShell en mode administrateur</li>
@@ -45,16 +45,18 @@ Projet séminaire
 	</li>
 </ol>
 
-<b>Partie 3 - Créer l'environnement virtuel </b>
+<p><b>Partie 3 - Créer l'environnement virtuel </b></p>
 <ol>
-	<li>Ouvrir PowerShell et créer un répertoire "Dev" (ou un autre nom si vous préférez)
-		<code>cd ~</code>
-		<code>mkdir Dev</code>
+	<li>
+		<p>Ouvrir PowerShell et créer un répertoire "Dev"</p>
+		<code>cd ~</code><br>
+		<code>mkdir Dev</code><br>
 	</li>
-	<li>Installer Pipenv (gestionnaire d'environnement virtuel) 
+	<li>
+		<p>Installer Pipenv (gestionnaire d'environnement virtuel)</p>
 		<code>python -m pip install pipenv</code>
-		Using python -m allows us to definitely use the python we just installed. You can also try this guide
-		<p><b>Going forward, whenever you see > or $ before code, that means you should be working in the Windows Powershell (or Command Prompt if you don't have Windows Powershell)</b></p>
+		<p>L'utilisation de python -m permet de définitivement se servir de la version de python que nous venons d'installer</p>
+		<p><b>Lorsque vous verrez > avant une ligne de code, c’est qu’elle devra être exécutée dans PowerShell</b></p>
 	</li>
 	<li>
 		<p>Vérifier que pipenv a bien été installé en entrant la commande suivante:</li></p>
@@ -73,17 +75,17 @@ Projet séminaire
 	<li>
     <p>Exéctuer la commande suivante:</p>
 		<code>> pipenv install</code>
-    <p>L'utilisation de pipenv install va utiliser votre python par défaut.</p>
+    <p>L'utilisation de pipenv install permettra d'utiliser votre python par défaut.</p>
 	</li>
 </ol>
 
-<b>Partie 4 - Activer son environnement et vérifier que tout est fonctionnel</b>
+<p><b>Partie 4 - Activer son environnement et vérifier que tout est fonctionnel</b></p>
 <ol>
-	<li>
+<li>
     <p>Activer son environnement:</p>
     <code>> cd Dev/demo</code><br>
     <code>> pipenv shell</code><br>
-		<p>
+	<p>
       Une fois votre environnement activé, vous pouvez installer tous les packages que vous voulez et ils n'auront pas d'impact 
       sur vos autres projets dans d'autres environnements, dans l'éventualité où vous utiliseriez différentes versions du même package
       dans 2 projets différents.
@@ -106,7 +108,7 @@ Projet séminaire
   </li>
 </ol>		
 		
-<b>Partie 5 - Installer Django</b>
+<p><b>Partie 5 - Installer Django</b></p>
 <ol>
   <li>
     <p>Installer la dernière version officielle de Django:</p>
@@ -117,11 +119,11 @@ Projet séminaire
 </ol>
 <br>
 
-For installation on Windows:
+Pour installation sur Windows:
 https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-windows-10
 
-For installation on Linux:
+Pour installation sur Linux:
 https://www.codingforentrepreneurs.com/blog/install-django-on-linux-ubuntu/
 
-For installation on Mac:
+Pour installation sur Mac:
 https://www.codingforentrepreneurs.com/blog/install-django-on-mac-or-linux/
