@@ -117,4 +117,11 @@ Projet séminaire
 </ol>
 <br>
 
-Source: https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-windows-10
+For installation on Windows:
+https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-windows-10
+
+For installation on Linux:
+https://www.codingforentrepreneurs.com/blog/install-django-on-linux-ubuntu/
+
+For installation on Mac:
+https://www.codingforentrepreneurs.com/blog/install-django-on-mac-or-linux/
