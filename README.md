@@ -1,0 +1,2 @@
+# demo-django
+Projet séminaire
