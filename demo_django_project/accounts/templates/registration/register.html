@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+<form method="POST" action="{% url 'accounts:register' %}">
+	{% csrf_token %}
+	{% if form.errors %}
+		<p>There is something wrong with your form</p>
+	{% endif %}
+
+	{{ form|crispy }}
+
+	<input type="submit" name="register" value="S'inscrire" class="btn btn-outline-primary btn-block">
+    <div style="margin-top: 10px">
+        Vous avez déjà un compte? Connectez-vous <a href="/accounts/login">ici</a>
+    </div>
+</form>
+{% endblock %}

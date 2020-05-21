@@ -1,0 +1,36 @@
+Accounts:
+1)
+	First name: Hans Christian
+	Last name: Andersen
+	email: hans_christian@gmail.com
+	username: hans12
+	password: test12345
+	is_author: true
+
+
+Categories:
+1)
+	Name: Livres jeunesse (12-)
+	Description: Des livres adaptés pour les petits et pour faire revivre la nostalgie de l'enfance chez les plus grands.
+
+2)
+	Name: Suspense
+	Description: Des livres qui vous tiendront en haleine jusqu'à la fin!
+	
+Books:
+1)
+	Title: La Petite Sirène
+	Summary: Ariel, la petite Sirène, a la plus belle voix des océans mais elle ne rêve que du prince Eric et du monde des humains. Ursula, la Sorcière des mers, lui propose un terrible marché. Saura-t-elle se sortir de ses griffes ? Trouvera-t-elle le moyen de réaliser ses rêves ?
+	Categories: Livres jeunesse (12-)
+	Price: 12.99
+	
+2)	Title: Blanche Neige
+	Summary: Il était une fois… Blanche Neige, une très jolie princesse. Sa belle-mère, la Reine, sentant qu'un jour la beauté de Blanche Neige dépasserait la sienne donne l'ordre à son garde chasse de la tuer. N'ayant pas le courage d'exécuter les ordres de la Reine, il abandonne Blanche Neige. Celle-ci après une longue marche tombe d'épuisement. Les animaux de la forêt l'emmènent alors jusqu'à la maison des sept nains. C'est ainsi qu'à son réveil, elle fait la connaissance de Prof, Simplet, Grincheux, Joyeux, Dormeur, Timide et Atchoum. La Reine apprend par son miroir magique que la princesse vit encore au fond d'un bois. Déguisée en vieille mendiante, elle profite de l'absence des nains pour lui faire mordre une pomme empoisonnée. Poursuivie par les sept nains, la sorcière tombe dans un ravin. Blanche Neige repose dans un cercueil en verre, confectionné par les nains. Un prince arrive sur les lieux et donne un baiser d'amour à la princesse. Blanche Neige ouvre alors les yeux comme si elle s'éveillait d'un profond sommeil. Et le prince emmena Blanche Neige dans son château où ils vécurent heureux pour longtemps et eurent plein d’enfants…
+	Categories: Livres jeunesse (12-)
+	Price: 15.99
+	
+Comments:
+1)
+	Title: Magnifique
+	Content: Superbe livre! Ma fille a adoré.
+	Anonymous: true

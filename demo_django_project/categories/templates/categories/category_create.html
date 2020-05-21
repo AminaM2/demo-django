@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+<form method="POST"> 
+    {% csrf_token %}
+	
+    {{ form|crispy  }}
+
+	<input type="submit" name="submit" value="Ajouter la catégorie" class="btn btn-block btn-outline-primary">
+</form>
+{% endblock %}

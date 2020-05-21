@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p>Titre: {{ object.title }}</p>
+<p>Content: {{ object.content }}</p>
+
+<a href="{% url 'comments:comment-delete' object.id %}" class="btn btn-danger">Supprimer le commentaire</a>
+
+{% endblock %}

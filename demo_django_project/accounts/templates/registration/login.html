@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<form method="POST" action="{% url 'accounts:login' %}" class="form-group">
+	{% csrf_token %}
+	{% if form.errors %}
+		<div class="alert alert-danger" role="alert">
+		  There is something wrong with your form
+		</div>
+	{% endif %}
+
+	{% if next %}
+		<p>Can't access that page</p>
+	{% endif %}
+
+	{{ form.username|as_crispy_field }}
+	{{ form.password|as_crispy_field }}
+
+	<input type="submit" name="login" value="Login" class="btn btn-block btn-outline-primary">
+	<input type="hidden" name="next" value="{{ next }}">
+	<div style="margin-top: 10px">
+		Pas encore de compte? Inscrivez-vous <a href="/accounts/register">ici</a>!
+	</div>
+</form>
+{% endblock %}

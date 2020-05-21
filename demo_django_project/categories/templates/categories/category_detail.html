@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p>Nom: {{ object.name }}</p>
+<p>Description: {{ object.description }}</p>
+
+<a href="{% url 'categories:category-delete' object.id %}" class="btn btn-danger">Supprimer la catégorie</a>
+
+{% endblock %}

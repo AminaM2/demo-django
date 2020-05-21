@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    {% if object_list %}
+        <h3 class="text-center">Liste des catégories</h3>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nom</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for object in object_list %}
+                <tr>
+                  <th scope="row">{{ forloop.counter }}</th>
+                  <td>{{ object.name }}</td>
+                  <td>{{ object.description }}</td>
+                </tr>
+            {% endfor %}    
+          </tbody>
+        </table>
+    {% else %}
+        <div class="alert alert-warning text-center">Il n'existe présentement aucune catégorie. Créez-en une <a href="{% url 'categories:category-create' %}">ici</a></div>
+    {% endif %}
+
+{% endblock %}
