@@ -26,7 +26,6 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('comments/', include('comments.urls')),
  	path('books/', include('books.urls')),
-    path('polls/', include('polls.urls')),
     # Possible to define your URL patterns with regular expressions. To do so, use re_path() instead of path().
 ]
 
