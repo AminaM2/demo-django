@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'accounts',
     'books',
     'categories',
-    'comments'
+    'comments',
+    'polls',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -137,9 +138,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "assets"),
 ]
 
-LOGIN_REDIRECT_URL = '/books'
+LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/accounts/login'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'

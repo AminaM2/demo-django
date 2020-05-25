@@ -7,12 +7,14 @@
 	{% csrf_token %}
 	{% if form.errors %}
 		<div class="alert alert-danger" role="alert">
-		  There is something wrong with your form
+		  Les informations valides sont invalides
 		</div>
 	{% endif %}
 
 	{% if next %}
-		<p>Can't access that page</p>
+		<div class="alert alert-danger" role="alert">
+			Impossible d'accéder à cette page
+		</div>
 	{% endif %}
 
 	{{ form.username|as_crispy_field }}
@@ -20,7 +22,7 @@
 
 	<input type="submit" name="login" value="Login" class="btn btn-block btn-outline-primary">
 	<input type="hidden" name="next" value="{{ next }}">
-	<div style="margin-top: 10px">
+	<div style="margin-top: 10px" class="text-center">
 		Pas encore de compte? Inscrivez-vous <a href="/accounts/register">ici</a>!
 	</div>
 </form>

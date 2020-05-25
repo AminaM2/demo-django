@@ -26,7 +26,15 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('comments/', include('comments.urls')),
  	path('books/', include('books.urls')),
+    path('polls/', include('polls.urls')),
+    # Possible to define your URL patterns with regular expressions. To do so, use re_path() instead of path().
 ]
 
 urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# (a, b, c) = tuple in python = collection of values = immutable (no deletion or reassignation of certain elements in a tuple, only of the tuple as a whole)
+# [] = list in python = collection of values = mutable
+# {} = dictionary in python = like a set of key: value pairs
+
+# you can leave a trailing comma on the last entry of any python data structure (list, tuple, dictionary)

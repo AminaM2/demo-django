@@ -5,13 +5,19 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'books:book-list' %}">Voir tous les livres</a>
-      </li>
       {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'books:book-list' %}">Voir tous les livres</a>
+        </li>
         {% if user.has_author_account or user.is_superuser %}
           <li class="nav-item">
             <a class="nav-link" href="{% url 'books:book-create' %}">Ajouter un livre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'poll-list' %}">Voir tous les sondages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'poll-create' %}">Ajouter un sondage</a>
           </li>
         {% endif %}
         {% if user.is_superuser %}
@@ -22,9 +28,6 @@
             <a class="nav-link" href="{% url 'categories:category-create' %}">Ajouter une catégorie</a>
           </li>
         {% endif %}
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'books:book-list' %}">Mon Profil</a>
-        </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'accounts:logout' %}">Se déconnecter</a>
         </li>

@@ -19,11 +19,11 @@ class BookListView(ListView):
 class BookDetailView(DetailView):
 	template_name = 'books/book_detail.html'
 	
-	def get_object(self):
+	def get_object(self): #if you use a parameter name different from pk
 		id_ = self.kwargs.get("id")
 		return get_object_or_404(Book, id=id_)
 
-	def get_context_data(self, **kwargs):
+	def get_context_data(self, **kwargs): #specify additionnal context variables
 		context = super().get_context_data(**kwargs)
 		context['comment_form'] = CommentForm
 		context['comment_list'] = Book.objects.get(id=self.kwargs.get("id")).comment_set.all()
@@ -32,7 +32,7 @@ class BookDetailView(DetailView):
 class BookCreateView(CreateView):
 	template_name = 'books/book_create.html'
 	form_class = BookForm
-	queryset = Book.objects.all()
+	queryset = Book.objects.all() # or model = Book
 
 	def form_valid(self, form):
 		form.instance.author = self.request.user #reference the currently logged in user
@@ -41,18 +41,11 @@ class BookCreateView(CreateView):
 class BookUpdateView(UpdateView):
 	template_name = 'books/book_create.html'
 	form_class = BookForm
-	queryset = Book.objects.all()
-
-	def get_object(self):
-		id_ = self.kwargs.get("id")
-		return get_object_or_404(Book, id=id_)
+	model = Book
 
 class BookDeleteView(DeleteView):
 	template_name = 'books/book_delete.html'
-
-	def get_object(self):
-		id_ = self.kwargs.get("id")
-		return get_object_or_404(Book, id=id_)
+	model = Book
 
 	def get_success_url(self):
 		return reverse('books:book-list')

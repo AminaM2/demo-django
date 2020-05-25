@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% load polls_extras %}
+
+    <div>
+        <h4>{{ object.book.title|formattitle }}</h4>
+
+        <div><b>Question:</b> {{ object.question }}</div>
+        <div><b>Sondeur:</b> {{ object.poller }}</div>
+        <div><b>Date de création:</b> {{ object.create_stamp|date:"Y M d" }}</div>
+        <div><b>Livre:</b> {{ object.book }}</div>
+    </div>
+    <a href="{% url 'poll-list' %}" class="btn btn-block btn-outline-primary">Retour à la liste des sondages</a>
+
+{% endblock %}
