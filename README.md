@@ -1,5 +1,5 @@
 # Demo Django - Installations
-Projet séminaire
+<h3>Projet séminaire</h3>
 
 <p>Étapes pour configurer votre environnement sur Windows*:</p>
 <p>*Pour configuration sur un autre système d'eploitation, voir la source fournie en bas du fichier</p>
