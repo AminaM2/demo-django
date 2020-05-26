@@ -1,3 +1,6 @@
+superusers:
+amina2-amina
+
 Accounts:
 1)
 	First name: Hans Christian
