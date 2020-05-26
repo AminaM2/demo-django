@@ -26,10 +26,10 @@ class CommentDetailView(DetailView):
 class CommentCreateView(CreateView):
     template_name = 'comments/comment_create.html'
     form_class = CommentForm
-    queryset = Comment.objects.all()
+    model = Comment
 
     def get_success_url(self):
-        return reverse('books:book-list') #detail book
+        return reverse('books:book-detail', kwargs={'id': self.object.book.id}) #redirect to the book's detail page
 
     def form_valid(self, form):
         form.instance.author = self.request.user #reference the currently logged in user
@@ -40,18 +40,15 @@ class CommentCreateView(CreateView):
 class CommentUpdateView(UpdateView):
     template_name = 'comments/comment_create.html'
     form_class = CommentForm
-    queryset = Comment.objects.all()
+    model = Comment
 
     def get_object(self):
         id_ = self.kwargs.get("id")
         return get_object_or_404(Comment, id=id_)
 
 class CommentDeleteView(DeleteView):
+    model = Comment
     template_name = 'comments/comment_delete.html'
 
-    def get_object(self):
-        id_ = self.kwargs.get("id")
-        return get_object_or_404(Comment, id=id_)
-
     def get_success_url(self):
-        return reverse('comments:comment-list')
+        return reverse('books:book-detail', kwargs={'id': self.object.book.id})

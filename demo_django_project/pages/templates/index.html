@@ -30,7 +30,7 @@
 					  		<tr>
 						      <th scope="row">{{ forloop.counter }}</th>
 						      <td>{{ book.author }}</td>
-						      <td>{{ book }}</td>
+						      <td><a href="{% url 'books:book-detail' book.pk %}">{{ book }}</a></td>
 						      <td>{{ book.create_stamp|date:"SHORT_DATE_FORMAT" }}</td>
 						    </tr>
 					  	{% endfor %}
@@ -59,7 +59,7 @@
 					  		<tr>
 						      <th scope="row">{{ forloop.counter }}</th>
 						      <td>{{ book.author }}</td>
-						      <td>{{ book }}</td>
+						      <td><a href="{% url 'books:book-detail' book.pk %}">{{ book }}</a></td>
 						      <td>{{ book.nb_likes }}</td>
 						    </tr>
 					  	{% endfor %}

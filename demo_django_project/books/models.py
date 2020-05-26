@@ -20,5 +20,10 @@ class Book(models.Model): #() indicate inheritance
 	def get_absolute_url(self):
 		return reverse("books:book-detail", kwargs={"id": self.id})
 
+	def like(self):
+		print(self.nb_likes)
+		self.nb_likes = self.nb_likes + 1
+		self.save()
+
 # check other field types here: https://docs.djangoproject.com/fr/3.0/ref/models/fields/
 # possible to write custom model fields
