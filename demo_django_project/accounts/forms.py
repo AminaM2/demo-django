@@ -15,3 +15,7 @@ class AccountForm(UserCreationForm):
             'password2'     : 'Confirmation du mot de passe',
             'is_author'     : 'Êtes-vous un(e) auteur(e)?'
         }
+
+        help_texts = {
+            'username': None,
+        }
