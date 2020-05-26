@@ -14,7 +14,7 @@ from django.views.generic import (
 
 class BookListView(ListView):
 	template_name = 'books/book_list.html'
-	queryset = Book.objects.all()
+	model = Book
 
 class BookDetailView(DetailView):
 	template_name = 'books/book_detail.html'
