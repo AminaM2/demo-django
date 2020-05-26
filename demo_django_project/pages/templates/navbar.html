@@ -13,12 +13,6 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'books:book-create' %}">Ajouter un livre</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'poll-list' %}">Voir tous les sondages</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'poll-create' %}">Ajouter un sondage</a>
-          </li>
         {% endif %}
         {% if user.is_superuser %}
           <li class="nav-item">

@@ -3,9 +3,49 @@ Accounts:
 	First name: Hans Christian
 	Last name: Andersen
 	email: hans_christian@gmail.com
-	username: hans12
+	username: hcandersen
 	password: test12345
 	is_author: true
+
+2)
+	First name: Elise
+	Last name: Deschamps
+	email: elise_deschamps@gmail.com
+	username: edeschamps
+	password: test12345
+	is_author: true
+	
+3)	
+	First name: John
+	Last name: Balan
+	email: john_balan@gmail.com
+	username: jbalan
+	password: test12345
+	is_author: true
+
+4)	
+	First name: Alice
+	Last name: Sansouci
+	email: alice_sansouci@gmail.com
+	username: asansouci
+	password: test12345
+	is_author: false
+
+5)	
+	First name: Pierrot
+	Last name: Trudeau
+	email: pierrot_trudeau@gmail.com
+	username: ptrudeau
+	password: test12345
+	is_author: false
+	
+6)
+	First name: Mantha
+	Last name: Lajolie
+	email: mantha_lajolie@gmail.com
+	username: mlajolie
+	password: test12345
+	is_author: false
 
 
 Categories:
@@ -17,6 +57,14 @@ Categories:
 	Name: Suspense
 	Description: Des livres qui vous tiendront en haleine jusqu'à la fin!
 	
+3)
+	Name: Horreur
+	Description: Des livres qui vous terrifieront, au point de vous empêcher de dormir...
+	
+4)
+	Name: Histoire
+	Description: Pour les amoureux des faits et des récits historiques.
+
 Books:
 1)
 	Title: La Petite Sirène
@@ -28,9 +76,15 @@ Books:
 	Summary: Il était une fois… Blanche Neige, une très jolie princesse. Sa belle-mère, la Reine, sentant qu'un jour la beauté de Blanche Neige dépasserait la sienne donne l'ordre à son garde chasse de la tuer. N'ayant pas le courage d'exécuter les ordres de la Reine, il abandonne Blanche Neige. Celle-ci après une longue marche tombe d'épuisement. Les animaux de la forêt l'emmènent alors jusqu'à la maison des sept nains. C'est ainsi qu'à son réveil, elle fait la connaissance de Prof, Simplet, Grincheux, Joyeux, Dormeur, Timide et Atchoum. La Reine apprend par son miroir magique que la princesse vit encore au fond d'un bois. Déguisée en vieille mendiante, elle profite de l'absence des nains pour lui faire mordre une pomme empoisonnée. Poursuivie par les sept nains, la sorcière tombe dans un ravin. Blanche Neige repose dans un cercueil en verre, confectionné par les nains. Un prince arrive sur les lieux et donne un baiser d'amour à la princesse. Blanche Neige ouvre alors les yeux comme si elle s'éveillait d'un profond sommeil. Et le prince emmena Blanche Neige dans son château où ils vécurent heureux pour longtemps et eurent plein d’enfants…
 	Categories: Livres jeunesse (12-)
 	Price: 15.99
+
+3)	Title: Le Meurtre de Madame Jodin
+	Summary: Les enquêteurs en ont plein les bras avec les multiples meurtres qui surviennent dans la ville de Montpetit. Cependant, celui de madame Jodin marquera un précédent...
+	Categories: Suspense, Horreur
+	Price: 18.99
 	
-Comments:
-1)
-	Title: Magnifique
-	Content: Superbe livre! Ma fille a adoré.
-	Anonymous: true
+4)	Title: Léon l'Africain
+	Summary: Cette autobiographie imaginaire part d'une histoire vraie.
+	En 1518, un ambassadeur maghrébin, de retour d'un pèlerinage à La Mecque, est capturé par des pirates siciliens, et offert en cadeau à Léon X. Ce voyageur s'appelait Hassan al-Wazzan. Il devint le géographe Jean-Léon de Médicis, dit Léon l'Africain. Sa vie, que ponctuent les grands événements de son temps, est fascinante : il se trouvait à Grenade pendant la Reconquista, d'où il a dû fuir l'Inquisition, en Egypte lors de sa conquête par les Ottomans, en Afrique noire à l'apogée de l'empire de l'Askia Mohamed Touré, enfin à Rome aux plus belles heures de la Renaissance, ainsi qu'au moment du sac de la ville par les soldats de Charles Quint.
+	Homme d'Orient et d'Occident, homme d'Afrique et d'Europe, on pouvait difficilement trouver personnage dont la vie corresponde davantage à l'époque étonnante que fut le XVIe siècle.
+	Categories: Histoire
+	Price: 18.99

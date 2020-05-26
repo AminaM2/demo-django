@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
     <h4><b>Titre:</b> {{ object.title }}</h4>
     <p><b>Auteur:</b> 
         {% if not object.author.get_full_name %}
@@ -37,9 +36,9 @@
 	{% for comment in comment_list %}
         <div style="background-color: white; padding: 10px; margin-bottom: 5px">
             {% if comment.anonymous %}
-                <p><em>{{ comment.author }}</em></p>
-            {% else %}
                 <p><em>Anonyme</em></p>
+            {% else %}
+                <p><em>{{ comment.author }}</em></p>
             {% endif %}
             <p><b>{{ comment.title }}</b></p>
             <p>{{ comment.content }}</p>

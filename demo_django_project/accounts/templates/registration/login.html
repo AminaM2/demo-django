@@ -7,20 +7,20 @@
 	{% csrf_token %}
 	{% if form.errors %}
 		<div class="alert alert-danger" role="alert">
-		  Les informations valides sont invalides
+		  Les informations fournies sont invalides
 		</div>
 	{% endif %}
 
 	{% if next %}
 		<div class="alert alert-danger" role="alert">
-			Impossible d'accéder à cette page
+			Impossible d'accéder à cette page sans vous êtes préalablement authentifié...
 		</div>
 	{% endif %}
 
 	{{ form.username|as_crispy_field }}
 	{{ form.password|as_crispy_field }}
 
-	<input type="submit" name="login" value="Login" class="btn btn-block btn-outline-primary">
+	<input type="submit" name="login" value="Se connecter" class="btn btn-block btn-outline-primary">
 	<input type="hidden" name="next" value="{{ next }}">
 	<div style="margin-top: 10px" class="text-center">
 		Pas encore de compte? Inscrivez-vous <a href="/accounts/register">ici</a>!

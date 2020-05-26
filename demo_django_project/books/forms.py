@@ -14,7 +14,6 @@ class BookForm(forms.ModelForm):
 			'summary'			: 'Résumé',
 			'category'			: 'Catégorie(s)',
 			'price'				: 'Prix',
-			'cover_page'		: 'Photo de la première de couverture',
 			'publication_date'	: 'Date de publication'
 		}
 
