@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'books',
     'categories',
     'comments',
+    'polls'
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

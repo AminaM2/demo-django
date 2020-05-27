@@ -5,7 +5,7 @@
 {% block content %}
 <form method="POST" enctype="multipart/form-data"> {% csrf_token %}
 	{{ form|crispy  }}
-	<input type="submit" name="submit" value="Ajouter le livre" class="btn btn-outline-primary btn-block">
+	<input type="submit" name="submit" value="Enregistrer le livre" class="btn btn-outline-primary btn-block">
 	
 </form>
 {% endblock %}

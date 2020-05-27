@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load polls_extras %}
+
+    {% for object in object_list %}        
+        <div class="card">
+            <div class="card-body">
+                <p><a href="{{ object.get_absolute_url }}">{{ object.question|format_poll }}</a></p>
+                <p>Sondage sur <em>{{ object.book }}</em> créé par <em>{{ object.poller }}</em> le {{ object.create_stamp|date:"SHORT_DATE_FORMAT" }}</p>
+            </div>
+        </div>
+        {% empty %}
+            <div class="alert alert-warning">
+                Aucun résultat à afficher
+            </div>
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div style="margin-bottom: 20px">
+        <h4><b>Titre:</b> {{ object.book.title }}</h4>
+
+        <div><b>Question:</b> {{ object.question }}</div>
+        <div><b>Sondeur:</b> {{ object.poller }}</div>
+        <div><b>Date de création:</b> {{ object.create_stamp|date:"Y M d" }}</div>
+        <div><b>Livre:</b> {{ object.book }}</div>
+    </div>
+    {% if object.poller == user %}
+        <form method="POST" action="{% url 'poll-delete' object.pk %}" style="margin-bottom: 5px">
+            {% csrf_token %}
+            <input type="submit" name="submit" value="Supprimer le sondage" class="btn btn-block btn-outline-danger">
+        </form>
+    {% endif %}
+    <a href="{% url 'poll-update' object.pk %}" class="btn btn-block btn-outline-secondary">Modifier le sondage</a>
+    <a href="{% url 'poll-list' %}" class="btn btn-block btn-outline-primary">Retour à la liste des sondages</a>
+
+{% endblock %}
