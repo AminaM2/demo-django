@@ -1,10 +1,10 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
+from django.urls import reverse
 from books.models import Book
 
 # Create your views here.
 def index_view(request):
-	print(request.user.is_authenticated)
 	if request.user.is_authenticated:
 		new_arrivals_list 	= Book.objects.order_by('-create_stamp')[:3] #order by descending order, keep first 3
 		top_books_list 		= Book.objects.order_by('-nb_likes')[:3] #order by descending order, keep first 3
@@ -14,7 +14,7 @@ def index_view(request):
 		}
 		return render(request, 'index.html', context)
 	else:
-		return render(request, 'accounts:login', {})
+		return redirect('accounts:login')
 
 def contact_view(request, *args, **kwargs):
 	return render(request, "contact.html", {})
