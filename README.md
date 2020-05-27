@@ -108,22 +108,28 @@ Projet séminaire
   </li>
 </ol>		
 		
-<p><b>Partie 5 - Installer Django</b></p>
-<ol>
-  <li>
-    <p>Installer la dernière version officielle de Django:</p>
-    <code>> cd ~\Dev\demo</code><br>
-    <code>> pipenv shell</code><br>
-    <code>(demo) > pipenv install Django==3.0.6</code><br>
-  </li>
-</ol>
-<br>
+<p><b>Partie 5 - Clôner le répertoire git</b></p>
+<p>Se rendre à l’url suivante et cloner le répertoire git suivant dans votre environnement virtuel (demo) :<p>
+<p>https://github.com/AminaM2/demo-django</p>
 
-Pour installation sur Windows:
-https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-windows-10
+<code>git clone https://github.com/AminaM2/demo-django.git</code><br>
 
-Pour installation sur Linux:
-https://www.codingforentrepreneurs.com/blog/install-django-on-linux-ubuntu/
+<p><b>Partie 6 – Installer les dépendances</b></p>
+<p>*Avoir son environnement virtuel activé</p>
+<pre>
+(demo) > cd demo-django
+(demo) > pip install -r requirements.txt
+</pre>
 
-Pour installation sur Mac:
-https://www.codingforentrepreneurs.com/blog/install-django-on-mac-or-linux/
+<p><b>Partie 7 – Partir l’application</p></b>
+<p>Partir le serveur et vérifier que l’application part sans problème :</p>
+<code>(demo) > python manage.py runserver</code>
+
+<p>Pour installation sur Windows:
+https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-windows-10</p>
+
+<p>Pour installation sur Linux:
+https://www.codingforentrepreneurs.com/blog/install-django-on-linux-ubuntu/</p>
+
+<p>Pour installation sur Mac:
+https://www.codingforentrepreneurs.com/blog/install-django-on-mac-or-linux/</p>
