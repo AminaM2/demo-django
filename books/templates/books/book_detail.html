@@ -14,7 +14,7 @@
         <a href="{% url 'books:book-delete' object.pk %}" class="btn btn-danger">Supprimer le livre</a>
         <a href="{% url 'books:book-update' object.pk %}" class="btn btn-secondary">Modifier le livre</a>
     {% else %}
-        <button onclick="{{ object.like }}" class="btn btn-primary">J'aime <i class="fas fa-heart"></i></button>
+        <a href="{% url 'books:book-like' object.pk %}" class="btn btn-primary">J'aime <i class="fas fa-heart"></i></a>
     {% endif %}
     <a href="{% url 'books:book-list'%}" class="btn btn-secondary">Voir tous les livres</a>
 

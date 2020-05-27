@@ -21,7 +21,6 @@ class Book(models.Model): #() indicate inheritance
 		return reverse("books:book-detail", kwargs={"id": self.id})
 
 	def like(self):
-		print(self.nb_likes)
 		self.nb_likes = self.nb_likes + 1
 		self.save()
 

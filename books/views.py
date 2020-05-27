@@ -1,8 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
 from .models import Book
 from .forms import BookForm
 from comments.forms import CommentForm
+from django.http import HttpResponseRedirect
 
 from django.views.generic import (
 	CreateView,
@@ -49,3 +50,8 @@ class BookDeleteView(DeleteView):
 
 	def get_success_url(self):
 		return reverse('books:book-list')
+
+def like_view(request, pk):
+	book = get_object_or_404(Book, pk=pk)
+	book.like()
+	return HttpResponseRedirect(reverse('books:book-detail', args=[pk]))
