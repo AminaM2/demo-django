@@ -12,7 +12,7 @@ class Account(AbstractUser):
         return self.is_author
 
     def __str__(self):
-        if self.first_name is None or self.first_name is '': #no null in python, use None instead
+        if self.first_name is None or not self.first_name: #no null in python, use None instead
             return self.username   
         else:
             return self.get_full_name()

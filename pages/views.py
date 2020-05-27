@@ -5,7 +5,6 @@ from books.models import Book
 # Create your views here.
 def index_view(request):
 	if request.user.is_authenticated:
-		#show the 3 more liked books
 		new_arrivals_list 	= Book.objects.order_by('-create_stamp')[:3] #order by descending order, keep first 3
 		top_books_list 		= Book.objects.order_by('-nb_likes')[:3] #order by descending order, keep first 3
 		context = {
