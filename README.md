@@ -105,7 +105,7 @@ Projet séminaire
 
 <p><b>Partie 7 – Partir l’application</p></b>
 <p>Partir le serveur et vérifier que l’application part sans problème :</p>
-<code>(demo) > python manage.py runserver</code><br>
+<code>(demo) > python manage.py runserver</code><br><br>
 
 <p>Pour installation sur Windows:
 https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-windows-10</p>
