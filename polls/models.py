@@ -6,7 +6,7 @@ from django.urls import reverse
 # Create your models here.
 class Poll(models.Model):
     question        = models.TextField()
-    poller          = models.ForeignKey(Account, on_delete=models.PROTECT) #prevents referenced object from being deleted
+    poller          = models.ForeignKey(Account, on_delete=models.PROTECT, limit_choices_to={'is_author': True}) #prevents referenced object from being deleted
     create_stamp    = models.DateField(auto_now_add=True)
     book            = models.ForeignKey(Book, on_delete=models.PROTECT)
     is_active       = models.BooleanField(default=True)

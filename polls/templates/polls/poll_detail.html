@@ -2,6 +2,20 @@
 
 {% block content %}
 
+    {% comment "Filters" %}
+        <div>
+            {% with str='Cette chaîne de caractères va être divisée' %}
+                <p><b>Chaîne de caractères originale:</b> {{ str }}</p>
+                <p>Filtre <b>random</b>: {{ str.split|random }}</p>
+                <p>Filtre <b>slice</b>: {{ str.split|slice:'1:4' }}</p>
+                <p>Filtre <b>join</b>: {{ str.split|join:'~' }}</p>
+                <p>Filtre <b>cut</b>: {{ str.split|join:'~'|cut:'~' }}</p>
+                <p>Filtre <b>wordcount</b>: {{ str.split|wordcount }}</p>
+                <p>Filtre <b>timesince</b>: {{ object.create_stamp|timesince }}</p>
+            {% endwith %}
+        </div>
+    {% endcomment %}
+
     <div style="margin-bottom: 20px">
         <h4><b>Titre:</b> {{ object.book.title }}</h4>
 
