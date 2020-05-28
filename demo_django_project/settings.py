@@ -144,7 +144,7 @@ LOGOUT_REDIRECT_URL = '/accounts/login'
 LOGIN_REQUIRED_IGNORE_PATHS = [
     r'/accounts/logout/$',
     r'/accounts/register/$',
-    r'/'
+    r'/$'
 ]
 
 MEDIA_URL = '/media/'
